@@ -1,0 +1,27 @@
+* {
+  background-color: black;
+}
+
+#header {
+  color: white;
+  font: Arial;
+  font-size: 48px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  text-align: center;
+  border-bottom: 1px solid white;
+}
+
+#searchbar {
+  color: white
+}
+
+#button {
+  color: white;
+}
+
+.movebar {
+  text-align: center;
+  color: white;
+  background-color: white:
+}
