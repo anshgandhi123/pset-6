@@ -5,5 +5,5 @@ function searchBar() {
 }
 function addList() {
   let list = new Array(message)
+  let message = console.log(list);
 }
-let message = console.log(list);
