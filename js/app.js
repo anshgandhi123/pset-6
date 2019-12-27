@@ -1,20 +1,15 @@
-window.onload = function() {
-
-document.getElementById("button").onclick = button
+window.onload = function () {
+  const list = document.getElementsByTagName("li");
+  const button = document.getElementById("button");
+  const searchbar = document.getElementById("searchbar");
 }
 
-function searchBar() {
-  let searchbar = document.getElementById("searchbar");
-  let message = window.onclick(message);
+function addElement() {
+  var li = document.createElement("li");
+  var searchbar = document.getElementById("searchbar").value
+  var text = document.createTextNode(searchbar);
+  li.appendChild(text)
+  var value = window.onsubmit(searchbar)
+  let toDoList = []
+  toDoList.push(value)
 }
-
-function addList() {
-  let list = new Array(message)
-  let message = console.log(list);
-}
-
-function removeList() {
-  removeChild[]
-}
-
-function
