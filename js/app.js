@@ -1,7 +1,6 @@
 window.onload = function () {
-  const list = document.getElementsByTagName("li");
   const button = document.getElementById("button");
-  const searchbar = document.getElementById("searchbar");
+  const list = document.getElementById("ul");
 }
 
 function addElement() {
@@ -9,7 +8,19 @@ function addElement() {
   var searchbar = document.getElementById("searchbar").value
   var text = document.createTextNode(searchbar);
   li.appendChild(text)
-  var value = window.onsubmit(searchbar)
-  let toDoList = []
-  toDoList.push(value)
+  document.getElementById("unorderedList").appendChild(li);
+  document.getElementById("searchbar").value = "";
+
+  var span = document.createElement("SPAN");
+  var secondText = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(secondText);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+}
+  }
 }
