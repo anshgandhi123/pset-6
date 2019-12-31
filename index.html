@@ -9,12 +9,13 @@
   <body>
     <h1 id="header">#TODO</h1>
     <div class="movebar">
-      <form>
       <br>
-        <input id="searchbar" type="text" placeholder="Type a task here...">
-        <button id="button">Add</button>
-      </form>
+        <input type="text" id="searchbar" placeholder="Type a task here...">
+        <span onclick="addElement()">
+          <button id="button" class="fa fa-plus-circle">Add</button>
+        </span>
     </div>
+    <br>
     <ul id="unorderedList"> </ul>
   </body>
 </html>
