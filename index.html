@@ -7,15 +7,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <h1 id="header">#TODO</h1>
-    <div class="movebar">
-      <br>
-        <input type="text" id="searchbar" placeholder="">
-        <span onclick="addElement()">
-          <button id="button">Add</button>
-        </span>
+    <div id="container">
+      <div class= "title">
+        <h1 id="header">#TODO</h1>
+          <div class="movebar">
+            <br>
+            <form id="toDoForm">
+              <input type="text" id="searchbar">
+              <span>
+                <button onclick()="addElement()" type="button"  id="button" >Add</button>
+              </span>
+            </form>
+          </div>
+      </div>
     </div>
-    <br>
-    <ul id="unorderedList"> </ul>
+      <br>
+      <ul id="unorderedList"> </ul>
   </body>
 </html>
