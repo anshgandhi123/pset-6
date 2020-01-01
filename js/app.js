@@ -2,7 +2,7 @@ window.onload = function() {
   create = document.getElementById("button").onclick
 }
 
-let toDo = [addElement];
+let toDo = [];
 
 function addElement() {
   var input = document.getElementById("searchbar").value
@@ -24,9 +24,6 @@ function addElement() {
     toDo.push(toDoList);
   }
   }
-
-
-
 
 /*
 
