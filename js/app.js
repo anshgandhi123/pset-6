@@ -1,11 +1,19 @@
- window.onload = function() {
-  create = document.getElementById("button").onclick;
-};
+window.onload = function() {
+  document.getElementById("button").onclick = addElement;
+  document.getElementById("fa fa close").onclick = deleteElement;
+
+}
 
 let toDo = [];
 
-function addElement(create) {
+const addElement = function() {
   var input = document.getElementById("searchbar").value
+  var liNode = document.createElement("li");
+  var listNode = document.getElementById("unorderedList");
+  liNode.append(input);
+  listNode.append(liNode);
+  toDo.push(liNode);
+
   if (input === "") {
     // on purpose
   }
@@ -16,38 +24,19 @@ function addElement(create) {
       priority: false,
       remove: null
     }
-    var listNode = document.getElementById("unorderedList");
-    var textNode = document.createTextNode(input.value);
-    var liNode = document.createElement("li");
-    liNode.append(textNode);
-    listNode.append(liNode);
-    toDo.push(toDoList);
+    }
   }
-  }
+  // get the enter key to work
 
-  /*
-  var firstLI = document.querySelector("li");
-  firstLI.addEventListener("onclick", function() {
-      var item = document.getElementById("searchbar").value
-      textNode = document.createTextNode(input.value),
-      liNode = document.createElement("li")
-      newItem.append(text)
-      document.getElementById("addElement").append(newItem)
-  });
-  /*
-  function addElement() {
-    var text = document.createTextNode(item)
-    var newItem = document.createElement("li")
+  enterKey = function(e) {
+    preventDefault(e)
+  if (null) {
+    // on purpose
   }
-*/
+  else if (e.keyCode == 13) {
+    document.body.onkeyup = addElement()
+  }
+}
 
-/*
-    var input = document.getElementById("searchbar").value;
-    function addElement() {
-    var listNode = document.getElementById("unorderedList"),
-        textNode = document.createTextNode(input.value),
-        liNode = document.createElement("li")
-        liNode.append(textNode);
-        listNode.append(liNode);
-  }
-  */
+  const deleteElement = function(e) {
+}

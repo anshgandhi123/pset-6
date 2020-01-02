@@ -92,4 +92,3 @@ If you submit your problem set at midnight (i.e., January 6, 2020, at 12:00am), 
 * Your code must adhere to the course style guidelines.
 
 Happy coding!
-
