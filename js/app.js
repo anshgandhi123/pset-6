@@ -1,10 +1,10 @@
-window.onload = function() {
-  create = document.getElementById("button").onclick
-}
+ window.onload = function() {
+  create = document.getElementById("button").onclick;
+};
 
 let toDo = [];
 
-function addElement() {
+function addElement(create) {
   var input = document.getElementById("searchbar").value
   if (input === "") {
     // on purpose
@@ -25,8 +25,7 @@ function addElement() {
   }
   }
 
-/*
-
+  /*
   var firstLI = document.querySelector("li");
   firstLI.addEventListener("onclick", function() {
       var item = document.getElementById("searchbar").value
@@ -35,7 +34,6 @@ function addElement() {
       newItem.append(text)
       document.getElementById("addElement").append(newItem)
   });
-  */
   /*
   function addElement() {
     var text = document.createTextNode(item)
