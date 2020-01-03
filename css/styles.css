@@ -25,3 +25,39 @@
   color: black;
   background-color: black:
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul li {
+  position: relative;
+  background-color: #cecece;
+  list-style-color: none;
+  cursor: pointer;
+  padding: 10px 6px 10px 30px;
+  transition: 0.3s;
+}
+
+ul li:hover {
+  background-color: #ddd;
+}
+
+ul lu.checked::before {
+  content: '';
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 15px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 10px;
+}
+
+ul li:hover {
+  background-color: #ddd;
+}

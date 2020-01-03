@@ -1,9 +1,7 @@
 window.onload = function() {
-  document.getElementById("button").onclick = addElement;
-  document.getElementById("fa fa close").onclick = deleteElement;
-
+document.getElementById("button").onclick = addElement;
+//  document.getElementById("fa fa close").onclick = deleteElement;
 }
-
 let toDo = [];
 
 const addElement = function() {
@@ -12,8 +10,7 @@ const addElement = function() {
   var listNode = document.getElementById("unorderedList");
   liNode.append(input);
   listNode.append(liNode);
-  toDo.push(liNode);
-
+  toDo.push(input);
   if (input === "") {
     // on purpose
   }
@@ -25,18 +22,16 @@ const addElement = function() {
       remove: null
     }
     }
-  }
-  // get the enter key to work
+  };
 
-  enterKey = function(e) {
-    preventDefault(e)
-  if (null) {
-    // on purpose
-  }
-  else if (e.keyCode == 13) {
-    document.body.onkeyup = addElement()
-  }
-}
+// fix enter key properly it still doesn't work idk why... :(
+  document.body.onkeyup = function(e) {
+    if (e.keyCode == 13) {
+      addElement();
+    }
+  };
 
-  const deleteElement = function(e) {
+/* deleteItem = (delete) => {
+
 }
+*/
