@@ -61,3 +61,8 @@ ul lu.checked::before {
 ul li:hover {
   background-color: #ddd;
 }
+
+.done {
+  margin-left: 500px;
+  margin-right: 20px;
+}
