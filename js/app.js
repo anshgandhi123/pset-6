@@ -1,18 +1,17 @@
 // NEED TO FIX EMPTY ENTER KEY THING AS IT STILL GOES THROUGH
 // NEED TO FIX DELETE ITEM THING TOO
 
-
 window.onload = function() {
 document.getElementById("button").onclick = addElement;
-document.getElementsByClassName("fa fa-trash").onclick = deleteElement;
+document.getElementsByClassName("X").onclick = deleteElement;
 document.body.onkeyup = function(e) {
     if (e.keyCode == 13) {
-      addElement()
+      addElement();
     }
   };
-}
+};
 let toDo = [];
-let removeButton = document.getElementsByClassName("fa fa-trash");
+let removeButton = document.getElementsByClassName("X");
 
 
 const addElement = function() {
@@ -29,27 +28,28 @@ const addElement = function() {
       complete: false,
       priority: false,
       remove: null
-    }
+    };
     }
   liNode.append(input);
   listNode.append(liNode);
   toDo.push(input);
 
 
-  var exclamation = document.createElement("button")
-  exclamation.id = exclamation
-  exclamation.value = "Priority"
+  var exclamation = document.createElement("button");
+  exclamation.id = exclamation;
+  exclamation.value = "Priority";
   exclamation.setAttribute("class", "priority");
-  exclamation.innerHTML = "!"
-  var done = document.createElement("button")
-  done.id = done
-  done.value = "Complete"
+  exclamation.innerHTML = "!";
+  var done = document.createElement("button");
+  done.id = done;
+  done.value = "Complete";
   done.setAttribute("class", "fa fa-check");
-  var remove = document.createElement("button")
-  remove.id = remove
-  remove.value = "Delete"
-  remove.setAttribute("class", "fa fa-trash");
-  liNode.append(exclamation)
+  var remove = document.createElement("button");
+  remove.id = remove;
+  remove.value = "Delete";
+  remove.setAttribute("class", "X");
+  remove.innerHTML = "X";
+  liNode.append(exclamation);
   liNode.append(done);
   liNode.append(remove);
 
@@ -57,21 +57,7 @@ const addElement = function() {
 
   };
 
-  const deleteElement = function() {
-    itemRemoved = false;
-
-    for (let i = 0; i < removeButton.length; i++) {
-        removeButton[i].onclick = function() {
-            const elementToRemove = toDo[i];
-            elementToRemove.remove();
-            items.splice(i, 1);
-            itemRemoved = true;
-        };
-
-        removeButton[i].onclick;
-
-        if (itemRemoved) {
-            break;
-        }
-    }
-}
+const deleteElement =   function(number) {
+  	toDo.splice(number,1);
+  	displayItems();
+  }
