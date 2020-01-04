@@ -57,7 +57,17 @@ const addElement = function() {
 
   };
 
-const deleteElement =   function(number) {
-  	toDo.splice(number,1);
-  	displayItems();
+  const deleteElement = function() {
+  var remove = false;
+  for (let i = 0; i < removeButton.length; i++) {
+    removeButton[i].onclick = function() {
+        remove = true;
+        let removeElement = [i];
+        removeElement.remove();
+        toDo.splice(i, 1);
+    };
+    if (remove) {
+        break;
+    }
   }
+};
