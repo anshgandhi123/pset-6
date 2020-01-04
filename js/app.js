@@ -23,7 +23,7 @@ const addElement = function() {
     }
     }
   };
-
+// need to clear search bar once hit add
 // fix enter key properly it still doesn't work idk why... :(
   document.body.onkeyup = function(e) {
     if (e.keyCode == 13) {
@@ -31,7 +31,12 @@ const addElement = function() {
     }
   };
 
-/* deleteItem = (delete) => {
+ const deleteElement = function() {
+   var removeInput = document.onclick
+   var liRemoveNode = document.remove('li');
+   var listNode = document.getElementById("unorderedList");
+   toDo.pop(removeInput);
+   listNode.append(liNode);
+   toDo.push(input);
 
-}
-*/
+ }
