@@ -135,7 +135,7 @@ const prioritizeElement = function() {
         prioritized = true;
       }
     };
-    if (prioritized) {
+    if (prioritized) { 
       break;
     }
   }
