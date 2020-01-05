@@ -54,7 +54,7 @@ table {
     margin-top: 25px;
     margin-bottom: auto;
     border-spacing: 15px;
-    color: blue;
+    color: darkorange;
     font-family: Tahoma;
 }
 .toDoList {
@@ -85,7 +85,7 @@ table {
 }
 .completeButton {
     align: center;
-    color: green;
+    color: blue;
     width: 45px;
     text-align: center;
     background-color: white;

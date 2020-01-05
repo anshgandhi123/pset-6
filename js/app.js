@@ -88,12 +88,16 @@ const completeElement = function() {
          items[x].style.setProperty("text-decoration", "line-through");
          items[x].style.backgroundColor = "lightgreen";
          completeButton[x].style.backgroundColor = "lightgreen";
+         items[x].style.color = "green"
+         completeButton[x].style.color = "green"
          toDo[x].complete = true;
        }
        else if (toDo[x].complete == true) {
-         completeButton[x].style.backgroundColor = "white";
          items[x].style.setProperty("text-decoration", "none");
          items[x].style.backgroundColor = "white";
+         completeButton[x].style.backgroundColor = "white";
+         items[x].style.color = "darkorange"
+         completeButton[x].style.color = "blue"
          toDo[x].complete = false;
        }
      };
@@ -111,6 +115,7 @@ const prioritizeElement = function() {
         elementPriorities = row[z]
         prioritized = true;
         priorityButton[z].style.backgroundColor = "yellow";
+        priorityButton[z].style.color = "red"
         row[0].before(elementPriorities);
         toDo[z].priority = true;
         const move = toDo[z];
@@ -121,6 +126,7 @@ const prioritizeElement = function() {
       else if (toDo[z].priority) {
         elementPriorities = row[z]
         priorityButton[z].style.backgroundColor = "white";
+        priorityButton[z].style.color = "purple"
         row[toDo.length - 1].after(elementPriorities);
         toDo[z].priority = false;
         let element_move = toDo[z];
