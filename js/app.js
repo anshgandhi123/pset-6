@@ -1,21 +1,23 @@
-let toDo = []
-var addButton = document.getElementById("addButton");
-var row = document.getElementsByClassName("row");
-let priorityButton = document.getElementsByClassName("priorityButton");
-let completeButton = document.getElementsByClassName("completeButton");
-let removeButton = document.getElementsByClassName("removeButton");
-let items = document.getElementsByClassName("toDoList")
-
-let elementPriorities;
-
 window.onload = function() {
   document.getElementById("table").onmouseover = start;
 }
 
+let toDo = []
+let addButton = document.getElementById("addButton");
+let removeButton = document.getElementsByClassName("removeButton");
+let completeButton = document.getElementsByClassName("completeButton");
+let priorityButton = document.getElementsByClassName("priorityButton");
+let items = document.getElementsByClassName("toDoList")
+let row = document.getElementsByClassName("row");
+let elementPriorities;
+let i;
+let x;
+let z;
+
 const addElement = function() {
   let input = document.getElementById("searchbar").value;
   if (input === "") {
-
+    // on purpose
   }
   else {
       let toDoList = {
@@ -72,7 +74,7 @@ const deleteElement = function() {
         toDo.splice(i, 1);
     };
     if (remove) {
-        break;
+        break; // on purpose
     }
   }
 }
@@ -96,7 +98,7 @@ const completeElement = function() {
        }
      };
      if (completed) {
-       break;
+       break; // on purpose
      }
   }
 }
@@ -111,9 +113,7 @@ const prioritizeElement = function() {
         priorityButton[z].style.backgroundColor = "yellow";
         row[0].before(elementPriorities);
         toDo[z].priority = true;
-
         const move = toDo[z];
-
         toDo.splice(z, 1);
         toDo.unshift(move);
         prioritized = true;
@@ -123,7 +123,6 @@ const prioritizeElement = function() {
         priorityButton[z].style.backgroundColor = "white";
         row[toDo.length - 1].after(elementPriorities);
         toDo[z].priority = false;
-
         let element_move = toDo[z];
         toDo.splice(z, 1);
         toDo.push(element_move);
